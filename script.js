@@ -8,9 +8,11 @@ pencil.addEventListener("click", function() {
 
 userInput.addEventListener("keydown", function(event) {
     if (event.key === "Enter") {
+        event.preventDefault(); 
         addItem();
     }
 });
+
 
 function addItem() {
     if (userInput.value.trim() !== "") {
